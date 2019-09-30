@@ -14,9 +14,35 @@
       "location": null,
       "user_input": null,
       "confidence": "High",
-      "note": "If we want to use docker, we do not need to enbale ssl inside the app"
+      "cwe_id": [
+        311
+      ],
+      "note": ""
+    },
+    {
+      "warning_type": "Unscoped Find",
+      "warning_code": 82,
+      "fingerprint": "8f7672177fe87a9ab32cd518d86f33ecb866c97792942b9be9e8eee3afe3dc27",
+      "check_name": "UnscopedFind",
+      "message": "Unscoped call to `Route#find_by_id`",
+      "file": "app/controllers/routes_controller.rb",
+      "line": 47,
+      "link": "https://brakemanscanner.org/docs/warning_types/unscoped_find/",
+      "code": "Route.find_by_id(params[:id])",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "RoutesController",
+        "method": "set_route"
+      },
+      "user_input": "params[:id]",
+      "confidence": "Weak",
+      "cwe_id": [
+        285
+      ],
+      "note": ""
     }
   ],
-  "updated": "2022-04-13 06:16:24 +0200",
-  "brakeman_version": "5.2.2"
+  "updated": "2023-05-07 11:59:41 +0700",
+  "brakeman_version": "5.4.1"
 }
