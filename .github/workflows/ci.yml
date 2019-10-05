@@ -49,7 +49,7 @@ jobs:
         image: postgres:11
         env:
           POSTGRES_USER: base_api_gateway
-          POSTGRES_DB: base_api_gateway_test
+          POSTGRES_DB: base_api_gateway_test_1
           POSTGRES_PASSWORD: postgres
         ports: ["5432:5432"]
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
@@ -86,17 +86,20 @@ jobs:
       - name: Setup test database
         env:
           RAILS_ENV: test
-          DATABASE_NAME: base_api_gateway_test
+          DATABASE_NAME: base_api_gateway
           DATABASE_HOST: localhost
           DATABASE_USER: base_api_gateway
           DATABASE_PASSWORD: postgres
+          TEST_ENV_NUMBER: 1
         run: |
-          bin/rails db:setup
+          bin/rails db:create
+          bin/rails db:migrate
       - name: Run tests
         env:
           RAILS_ENV: test
-          DATABASE_NAME: base_api_gateway_test
+          DATABASE_NAME: base_api_gateway
           DATABASE_HOST: localhost
           DATABASE_USER: base_api_gateway
           DATABASE_PASSWORD: postgres
+          TEST_ENV_NUMBER: 1
         run: bundle exec rspec # TODO: Update the test runner command as per your requirement.

@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
 
   def current_user
     if auth_present?
-      user = User.find_by(auth["user"])
+      user = User.find_by(id: auth["user"])
 
       if user
         @current_user ||= user
