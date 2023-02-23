@@ -52,29 +52,12 @@ You can see a list of gems that are in the project with a link to their commit. 
 * [Simplecov](https://github.com/simplecov-ruby/simplecov) for code coverage
 * [Webmock](https://github.com/bblimke/webmock) or stubbing http requests
 
+#### Linting Gems
 
-### Front-end
-
-### Healthy app
-
-#### Frontend
-
-- 18- Code quality and format ([PR1](https://github.com/zakariaf/rails-base-app/pull/2), [PR2](https://github.com/zakariaf/rails-base-app/pull/3))
-  - [ESlint](https://eslint.org/)
-  - [Eslint plugin vue](https://eslint.vuejs.org/rules/)
-  - [Prettier](https://prettier.io/)
-  - [Husky](https://typicode.github.io/husky/#/)
-  - [lint-staged](https://github.com/okonet/lint-staged)
-
-#### Backend
-
-- 7- [RuboCop](https://github.com/rubocop/rubocop) Code quality and format. First I added [rubocop-rails_config gem](https://github.com/toshimaru/rubocop-rails_config) by these two commits ([commit1](https://github.com/zakariaf/rails-base-app/commit/abfdce196721e517b9391b618093506fe062c499)) ([commit2](https://github.com/zakariaf/rails-base-app/commit/89e675b793a0467b271e91c85215a6539bcc4b57)), but after a while, I removed this gem and added rubocop gem and its extensions separately in this [PR](https://github.com/zakariaf/rails-base-app/pull/8)
-
-- 20- [Brakeman](https://github.com/presidentbeef/brakeman) Checking Ruby on Rails applications for security vulnerabilities. you can check `config/brakeman.ignore` to see ignore errors ([PR](https://github.com/zakariaf/rails-base-app/pull/7))
-- 21- [bundler-audit](https://github.com/rubysec/bundler-audit) Patch-level verification for bundler ([PR](https://github.com/zakariaf/rails-base-app/pull/7))
-- 22- [Fasterer](https://github.com/DamirSvrtan/fasterer) Make Rubies code faster by suggestion some speed improvements. check `.fasterer.yml` to enable/disable suggestions ([PR](https://github.com/zakariaf/rails-base-app/pull/7))
-- 23- [License Finder](https://github.com/pivotal/LicenseFinder) Check the licenses of the gems and packages. you can update `doc/dependency_decisions.yml` to manage licenses ([PR](https://github.com/zakariaf/rails-base-app/pull/7))
-- Moving linting gems into development and test group in Gemfile ([commit](https://github.com/zakariaf/rails-base-app/commit/5671c93ac791b4ad7ea8dcc191d0f36730887f50))
+* [RuboCop](https://github.com/rubocop/rubocop) Code quality and format.
+* [Brakeman](https://github.com/presidentbeef/brakeman) Checking Ruby on Rails applications for security vulnerabilities. you can check `config/brakeman.ignore` to see ignore errors ([PR](https://github.com/zakariaf/rails-base-app/pull/7))
+* [bundler-audit](https://github.com/rubysec/bundler-audit) Patch-level verification for bundler ([PR](https://github.com/zakariaf/rails-base-app/pull/7))
+* [Fasterer](https://github.com/DamirSvrtan/fasterer) Make Rubies code faster by suggestion some speed improvements. check `.fasterer.yml` to enable/disable suggestions ([PR](https://github.com/zakariaf/rails-base-app/pull/7))
 
 #### Common
 

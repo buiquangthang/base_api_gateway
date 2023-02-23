@@ -59,6 +59,10 @@ group :development, :test do
   gem 'rubocop-performance'
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
+
+  gem 'brakeman'
+  gem 'bundler-audit'
+  gem 'fasterer'
 end
 
 group :development do
