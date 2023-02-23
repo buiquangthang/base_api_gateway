@@ -63,6 +63,8 @@ group :development, :test do
   gem 'brakeman'
   gem 'bundler-audit'
   gem 'fasterer'
+
+  gem 'overcommit'
 end
 
 group :development do
