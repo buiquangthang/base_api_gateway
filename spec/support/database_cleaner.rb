@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'database_cleaner/active_record'
 
 RSpec.configure do |config|
@@ -5,7 +7,7 @@ RSpec.configure do |config|
     DatabaseCleaner.clean_with(:truncation)
   end
 
-  config.before(:each) do |example|
+  config.before do |example|
     DatabaseCleaner.strategy =
       if example.metadata[:js]
         :truncation
@@ -15,7 +17,7 @@ RSpec.configure do |config|
     DatabaseCleaner.start
   end
 
-  config.after(:each) do
+  config.after do
     DatabaseCleaner.clean
 
     # NOTE: Use it when your testcase is using active storage
