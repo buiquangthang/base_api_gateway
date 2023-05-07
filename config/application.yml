@@ -1,0 +1,11 @@
+default: &default
+  AUTH_SECRET: 1234567890
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

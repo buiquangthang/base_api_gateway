@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 # NOTE: we can apply the template of Model RSpec in this link
 # https://gist.github.com/buiquangthang/8017c7a29174e7b396d20239be55f2a3
 
-RSpec.describe Service, type: :model do
+RSpec.describe Service do
+  let(:service) { build(:service) }
+
   it 'has a valid factory' do
     expect(build(:service)).to be_valid
   end
-
-  let(:service) { build :service }
 
   describe 'ActiveRecord associations' do
     # Associations

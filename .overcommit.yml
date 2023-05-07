@@ -61,3 +61,7 @@ PreCommit:
     enabled: true
     required_executable: './node_modules/.bin/eslint'
     command: ['yarn', 'lint']
+
+  RSpec:
+    enabled: true
+    command: ['bundle', 'exec', 'rspec']

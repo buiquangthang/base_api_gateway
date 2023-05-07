@@ -12,6 +12,7 @@ AllCops:
     - "lib/**/*"
     - "bin/**/*"
     - "db/schema.rb"
+    - "spec/rails_helper.rb"
 
 Metrics/BlockLength:
   AllowedMethods:
