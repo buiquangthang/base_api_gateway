@@ -32,3 +32,4 @@
 /config/database.yml
 /test/*
 /coverage/*
+/config/application.yml
