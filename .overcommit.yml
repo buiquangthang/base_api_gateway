@@ -64,4 +64,4 @@ PreCommit:
 
   RSpec:
     enabled: true
-    command: ['bundle', 'exec', 'rspec']
+    command: ['bundle', 'exec', 'rake', 'parallel:spec']
