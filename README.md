@@ -52,6 +52,7 @@ You can see a list of gems that are in the project with a link to their commit. 
 * [Shoulda Matchers](http://github.com/thoughtbot/shoulda-matchers) for common RSpec matchers
 * [Simplecov](https://github.com/simplecov-ruby/simplecov) for code coverage
 * [Webmock](https://github.com/bblimke/webmock) or stubbing http requests
+* [Parallel Testing](https://github.com/grosser/parallel_tests) to speed up testing run time.
 
 #### Linting Gems
 
@@ -118,45 +119,7 @@ yarn dev
 
 ## Docker
 
-As I mentioned before, We use Docker only for building production images. We are using [Docker Compose](https://docs.docker.com/compose/) to build the images and run the containers. You can check the `docker-compose.yml` file to see the configurations. and you can check the `Dockerfile` file to see the configurations for the production image.
-
-Dockerize was done by these two MRs:
-
-- [Dockerize the app](https://github.com/zakariaf/rails-base-app/pull/23)
-- [Dockerize the app (2)](https://github.com/zakariaf/rails-base-app/pull/32)
-
-**NOTE** Documentation about docker is not complete yet, I will update it soon.
-
-### 1. Build the images
-
-```bash
-docker compose build
-```
-
-## Renaming the project
-
-This app is named `baseapp` and the module is named `BaseApp`. But for sure you would like to have a different name.
-
-The only thing you need to do is just running the `bin/rename-project yourappname YouAppName` script.
-as you see this script needs 2 arguments:
-
-- First argument: The lower case version of your app's name, such as `myapp` or `my_app` depending on your preference.
-- Second argument: Used for your app's module name. such as `MyApp`
-
-`bin/rename-project myapp MyApp`
-
-This script is going to:
-
-- Perform a number of find / replace actions
-- Initialize a new git repo for you (Optionally)
-
-After that, If you're happy with your new project's name you can delete this
-script.
-
-Or you can keep it around in case you decide to change your project's
-name later on.
-
-I got the rename script idea and codes from [Docker Rails Example](https://github.com/nickjj/docker-rails-example#running-a-script-to-automate-renaming-the-project) project with some small changes.
+**NOTE** Dockerize is not complete yet, I will update it soon.
 
 ## How to contribute
 
@@ -174,5 +137,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## TODO
 
-- [ ] automat deploy process using capistrano
-- [ ] Add cypress (e2e testing)
+- [ ] automatic deploy process using MRSK
+- [ ] Add cucumber (e2e testing)
+- [ ] Dockerize app
+- [ ] Setup Github Action
+- [ ] UI CRUD routes and service

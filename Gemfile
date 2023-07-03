@@ -70,6 +70,8 @@ group :development, :test do
 
   gem 'overcommit'
   gem 'pry-rails'
+
+  gem 'parallel_tests'
 end
 
 group :development do
