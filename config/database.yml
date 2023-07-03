@@ -17,6 +17,11 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  host: <%= ENV['DATABASE_HOST'] %>
+  database: <%= ENV['DATABASE_NAME'] %>
+  username: <%= ENV['DATABASE_USER'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  timeout: 5000
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -24,24 +29,25 @@ default: &default
 development:
   <<: *default
   database: base_api_gateway_development
+  reaping_frequency: 10
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: base_api_gateway
+  # username: base_api_gateway
 
   # The password associated with the postgres role (username).
-  #password:
+  # password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
-  #host: localhost
+  # host: localhost
 
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
-  #port: 5432
+  # port: 5432
 
   # Schema search path. The server defaults to $user,public
   #schema_search_path: myapp,sharedapp,public
@@ -81,6 +87,4 @@ test:
 #
 production:
   <<: *default
-  database: base_api_gateway_production
-  username: base_api_gateway
-  password: <%= ENV["BASE_API_GATEWAY_DATABASE_PASSWORD"] %>
+  reaping_frequency: 10

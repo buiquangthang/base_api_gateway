@@ -1,4 +1,8 @@
 default: &default
+  DATABASE_HOST: 127.0.0.1
+  DATABASE_NAME:
+  DATABASE_USER:
+  DATABASE_PASSWORD:
   AUTH_SECRET: 1234567890
 
 development:

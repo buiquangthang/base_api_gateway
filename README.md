@@ -1,3 +1,4 @@
+
 <p align="center">
   <a href="https://rubyonrails.org/"><img width="300" src="https://zakaria.dev/assets/images/rails_base_app/Ruby_On_Rails_Logo.png" alt="Ruby On Rails"></a>
   <a href="https://www.docker.com" style="margin-left: 20px"><img width="105" src="https://zakaria.dev/assets/images/rails_base_app/docker-logo.png" alt="Docker"></a>
@@ -55,14 +56,14 @@ You can see a list of gems that are in the project with a link to their commit. 
 #### Linting Gems
 
 * [RuboCop](https://github.com/rubocop/rubocop) Code quality and format.
-* [Brakeman](https://github.com/presidentbeef/brakeman) Checking Ruby on Rails applications for security vulnerabilities. you can check `config/brakeman.ignore` to see ignore errors ([PR](https://github.com/zakariaf/rails-base-app/pull/7))
+* [Brakeman](https://github.com/presidentbeef/brakeman) Checking Ruby on Rails applications for security vulnerabilities. you can check `config/brakeman.ignore` to see ignore errors.
 * [bundler-audit](https://github.com/rubysec/bundler-audit) Patch-level verification for bundler
 * [Fasterer](https://github.com/DamirSvrtan/fasterer) Make Rubies code faster by suggestion some speed improvements. check `.fasterer.yml` to enable/disable suggestions
 
 #### Common
 
 * [overcommit](https://github.com/sds/overcommit) to manage and configure Git hooks by managing all healthy app tools. you can check `.overcommit.yml` to enable or disable tools.
-* Enabling github action to run `overcommit` after push and pull requests in github. Check `.github/workflows/lint.yml` to see the github configs ([PR](https://github.com/zakariaf/rails-base-app/pull/7))
+* TODO: Enabling github action to run `overcommit` after push and pull requests in github.
 
 
 ## Apps
@@ -76,8 +77,8 @@ To run the app locally, you need to have [Ruby](https://www.ruby-lang.org/en/) a
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/zakariaf/rails-base-app baseapp
-cd baseapp
+git clone https://github.com/buiquangthang/base_api_gateway.git
+cd base_api_gateway
 ```
 
 ### 2. Install dependencies
@@ -87,17 +88,12 @@ bundle install # install ruby gems
 yarn install # install node packages
 ```
 
-### 3. Copy .env to .env.local
+### 3. Copy application.yml.sample to application.yml
 
-- `.env` file is used for production
-- `.env.local` will be used for development
-- `.env.test` will be used for test
-
-Usually, you only need to change the Postgres variables in `.env.local` file to match your local database.
+Usually, you only need to change the Postgres variables in `application.yml` file to match your local database.
 
 ```bash
-cp .env .env.local
-cp .env .env.test
+cp config/application.yml.sample config/application.yml
 ```
 
 ### 4. Setup database
