@@ -64,7 +64,8 @@ You can see a list of gems that are in the project with a link to their commit. 
 #### Common
 
 * [overcommit](https://github.com/sds/overcommit) to manage and configure Git hooks by managing all healthy app tools. you can check `.overcommit.yml` to enable or disable tools.
-* TODO: Enabling github action to run `overcommit` after push and pull requests in github.
+* [boring_generators](https://github.com/abhaynikam/boring_generators) make your development faster by delegating boring setups to us.
+* Enabling github action to run `overcommit` after push and pull requests in github. [Setup PR](https://github.com/buiquangthang/base_api_gateway/pull/12)
 
 
 ## Apps
