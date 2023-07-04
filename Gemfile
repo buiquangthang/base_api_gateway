@@ -72,6 +72,7 @@ group :development, :test do
   gem 'pry-rails'
 
   gem 'parallel_tests'
+  gem 'boring_generators'
 end
 
 group :development do

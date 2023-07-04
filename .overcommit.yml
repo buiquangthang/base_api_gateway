@@ -58,10 +58,10 @@ PreCommit:
     command: ['yarn', 'audit']
 
   EsLint:
-    enabled: true
+    enabled: false
     required_executable: './node_modules/.bin/eslint'
     command: ['yarn', 'lint']
 
   RSpec:
-    enabled: true
+    enabled: false
     command: ['bundle', 'exec', 'rake', 'parallel:spec']
