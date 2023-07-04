@@ -73,6 +73,8 @@ GEM
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
+    boring_generators (0.12.0)
+      railties
     brakeman (5.4.1)
     builder (3.2.4)
     bundler-audit (0.9.1)
@@ -163,6 +165,8 @@ GEM
       net-protocol
     nio4r (2.5.8)
     nokogiri (1.14.3-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.14.3-x86_64-linux)
       racc (~> 1.4)
     overcommit (0.60.0)
       childprocess (>= 0.6.3, < 5)
@@ -318,10 +322,12 @@ GEM
 
 PLATFORMS
   x86_64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap
+  boring_generators
   brakeman
   bundler-audit
   capybara
