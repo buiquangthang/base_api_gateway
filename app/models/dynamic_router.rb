@@ -1,5 +1,8 @@
 class DynamicRouter
   def self.load
+    # Not loading if docker is buiding
+    return if ENV['DOCKER_BUILDING'].present?
+
     # Routes table does not exist at initial app setup and causes to stop db migration
     return unless ActiveRecord::Base.connection.data_source_exists? 'routes'
 
