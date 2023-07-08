@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   resources :routes
   resources :services
+
+  DynamicRouter.load
 end

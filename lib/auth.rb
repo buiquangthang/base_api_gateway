@@ -5,7 +5,6 @@ class Auth
 
   def self.issue(payload, exp: 7.days.from_now)
     payload[:exp] = exp.to_i
-
     JWT.encode(
       payload,
       auth_secret,
