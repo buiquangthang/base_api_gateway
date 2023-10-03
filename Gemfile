@@ -104,3 +104,5 @@ end
 
 gem 'httparty'
 gem 'jwt'
+
+gem "tailwindcss-rails", "~> 2.0"

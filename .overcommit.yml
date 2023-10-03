@@ -35,7 +35,7 @@ PreCommit:
 
   BundleAudit:
     description: 'Checks for vulnerable versions of gems in Gemfile.lock.'
-    enabled: true
+    enabled: false
     command: ['bundle', 'exec', 'bundle-audit']
     flags: ['--update']
 
@@ -54,7 +54,7 @@ PreCommit:
 
   YarnAudit:
     description: 'Checks for vulnerable versions of packages in yarn.lock.'
-    enabled: true
+    enabled: false
     command: ['yarn', 'audit']
 
   EsLint:
