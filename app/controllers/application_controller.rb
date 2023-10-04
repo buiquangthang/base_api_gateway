@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   NotAuthorized = Class.new(StandardError)
 
-  before_action :authenticate
+  # before_action :authenticate
 
   rescue_from ApplicationController::NotAuthorized do |exception|
     render json: { errors: [ message: "401 NotAuthorized"] }, status: :unauthorized

@@ -1,0 +1,18 @@
+<%= form_with(model: service, class: "mb-7") do |form| %>
+  <div class="mb-5">
+    <%= form.text_field :name, placeholder: "Service name",
+      class: "inline-block w-96 px-3 py-2 mt-2 shadow rounded-md border border-gray-200 outline-none" %>
+  </div>
+
+  <div class="mb-5">
+    <%= form.text_field :url, placeholder: "Service url",
+      class: "inline-block w-96 px-3 py-2 mt-2 shadow rounded-md border border-gray-200 outline-none" %>
+  </div>
+
+  <div class="mb-5">
+    <%= form.password_field :token, placeholder: "Service token",
+      class: "inline-block w-96 px-3 py-2 mt-2 shadow rounded-md border border-gray-200 outline-none" %>
+  </div>
+
+  <%= form.submit "Save", class: "btn py-2 ml-2 bg-blue-600 text-white" %>
+<% end %>

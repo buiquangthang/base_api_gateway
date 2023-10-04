@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   resources :routes
   resources :services
 
+  post "services/:id/toggle", to: "services#toggle"
+
   DynamicRouter.load
 end

@@ -35,7 +35,7 @@ PreCommit:
 
   BundleAudit:
     description: 'Checks for vulnerable versions of gems in Gemfile.lock.'
-    enabled: false
+    enabled: true
     command: ['bundle', 'exec', 'bundle-audit']
     flags: ['--update']
 
