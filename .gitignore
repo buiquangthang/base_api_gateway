@@ -33,3 +33,9 @@
 /test/*
 /coverage/*
 /config/application.yml
+
+/app/assets/builds/*
+!/app/assets/builds/.keep
+
+# Ignore node modules
+/node_modules/

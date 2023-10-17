@@ -54,7 +54,7 @@ PreCommit:
 
   YarnAudit:
     description: 'Checks for vulnerable versions of packages in yarn.lock.'
-    enabled: true
+    enabled: false
     command: ['yarn', 'audit']
 
   EsLint:

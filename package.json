@@ -1,0 +1,11 @@
+{
+  "name": "base_api_gateway",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:buiquangthang/base_api_gateway.git",
+  "author": "THANG BUI QUANG",
+  "license": "MIT",
+  "dependencies": {
+    "flowbite": "^1.8.1"
+  }
+}

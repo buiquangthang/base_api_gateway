@@ -1,11 +1,9 @@
 class ServicesController < ApplicationController
-  before_action :set_service, only: [:show, :update, :destroy]
+  before_action :set_service, except: [:index, :new, :create]
 
   # GET /services
   def index
     @services = Service.all
-
-    render json: @services
   end
 
   # GET /services/1
@@ -13,29 +11,47 @@ class ServicesController < ApplicationController
     render json: @service
   end
 
+  # GET /services/new
+  def new
+    @service = Service.new
+  end
+
   # POST /services
   def create
     @service = Service.new(service_params)
 
-    if @service.save
-      render json: @service, status: :created, location: @service
-    else
-      render json: @service.errors, status: :unprocessable_entity
+    respond_to do |format|
+      if @service.save
+        format.html { redirect_to services_url, notice: "Service was successfully created" }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+      end
     end
   end
 
+  # GET /services/:id
+  def edit; end
+
   # PATCH/PUT /services/1
   def update
-    if @service.update(service_params)
-      render json: @service
-    else
-      render json: @service.errors, status: :unprocessable_entity
+    respond_to do |format|
+      if @service.update(service_params)
+        format.html { redirect_to services_url, notice: "Service was successfully updated" }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+      end
     end
   end
 
   # DELETE /services/1
   def destroy
     @service.destroy
+    redirect_to services_url, notice: "Service was successfully deleted."
+  end
+
+  # POST /service/:id/toggle
+  def toggle
+    render json: { message: "Success" }
   end
 
   private
