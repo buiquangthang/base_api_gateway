@@ -109,14 +109,9 @@ bundle rails db:setup
 - Run the server
 
 ```bash
-bundle rails s
+bin/dev
 ```
 
-- Run the frontend
-
-```bash
-yarn dev
-```
 
 ## Docker
 
@@ -140,6 +135,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - [ ] automatic deploy process using MRSK
 - [ ] Add cucumber (e2e testing)
-- [ ] Dockerize app
-- [ ] Setup Github Action
+- [x] Dockerize app
+- [x] Setup Github Action
 - [ ] UI CRUD routes and service
+- [ ] Authenticate admin role with LDAP
+- [ ] Try to apply domain driven event
+- [ ] Dashboard for statistic

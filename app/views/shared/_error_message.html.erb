@@ -1,0 +1,10 @@
+<% if errors %>
+  <div id="error_explanation" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+    <h2 class="font-bold">Validation Error:</h2>
+    <ul class="list-disc list-inside">
+      <% errors.each do |error| %>
+        <li><%= error.text %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
