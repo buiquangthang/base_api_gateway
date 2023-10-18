@@ -18,12 +18,14 @@ class ServicesController < ApplicationController
 
   # POST /services
   def create
-    @service = Service.new(service_params)
+    result = ::Operations::Services::Create.call(service_params.to_h)
 
     respond_to do |format|
-      if @service.save
+      if result.success?
         format.html { redirect_to services_url, notice: "Service was successfully created" }
       else
+        @errors = result.failure
+        @service = Service.new(service_params)
         format.html { render :new, status: :unprocessable_entity }
       end
     end

@@ -1,0 +1,5 @@
+en:
+  errors:
+    numeric?: must be a number
+    str_lteq?: must be less than or equal to %{num}
+    str_gteq?: must be greater than or equal to %{num}

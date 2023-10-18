@@ -73,6 +73,7 @@ group :development, :test do
 
   gem 'overcommit'
   gem 'pry-rails'
+  gem 'pry-remote'
 
   gem 'parallel_tests'
   gem 'boring_generators'
@@ -106,3 +107,8 @@ gem 'httparty'
 gem 'jwt'
 
 gem "tailwindcss-rails", "~> 2.0"
+
+# Dry-rb ecosystem
+gem 'dry-validation', '~> 1.10'
+gem 'dry-monads', '~> 1.6'
+gem 'dry-struct', '~> 1.6'
