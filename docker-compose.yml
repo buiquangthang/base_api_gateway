@@ -58,6 +58,7 @@ services:
       - "${DOCKER_WEB_PORT_FORWARD:-127.0.0.1:3000}:${PORT:-3000}"
     profiles: ["web"]
     tty: true
+    stdin_open: true
 
   # worker:
   #   <<: *default-app

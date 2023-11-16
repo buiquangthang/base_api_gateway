@@ -83,5 +83,9 @@ COPY --chown=app --from=dependencies /app/public/ /app/public/
 # Note that we have to use `--chown` here
 COPY --chown=app . ./
 
+COPY --chown=app entrypoint.sh /usr/bin/
+RUN chmod +x /usr/bin/entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
+
 # Launch the server
 CMD ["rails", "s"]

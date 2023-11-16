@@ -1,4 +1,7 @@
 class ServicesController < ApplicationController
+  # TODO: need add authenticate again after add authenticate with LDAP
+  skip_before_action :authenticate
+
   before_action :set_service, except: [:index, :new, :create]
 
   # GET /services
