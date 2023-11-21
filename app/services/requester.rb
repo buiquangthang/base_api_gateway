@@ -63,11 +63,13 @@ class Requester
       response = yield
       code = response.code.to_i
       body = response.body
+
       unless success_code? code
         message = {
           code: code,
           body: JSON.parse(body)
         }.to_json
+
         raise ServiceResponseError, message
       end
 

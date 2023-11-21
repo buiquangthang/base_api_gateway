@@ -31,3 +31,12 @@ Style/Documentation:
 
 RSpec/MultipleMemoizedHelpers:
   Max: 10
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MessageSpies:
+  Enabled: false
