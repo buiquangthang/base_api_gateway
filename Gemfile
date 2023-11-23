@@ -77,6 +77,8 @@ group :development, :test do
 
   gem 'parallel_tests'
   gem 'boring_generators'
+
+  gem 'faker'
 end
 
 group :development do
@@ -88,10 +90,11 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  gem 'ruby-progressbar'
 end
 
 group :test do
-  gem 'faker'
   gem 'database_cleaner-active_record'
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
