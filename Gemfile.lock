@@ -413,6 +413,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   rubocop-rspec
+  ruby-progressbar
   selenium-webdriver
   shoulda-matchers
   simplecov
